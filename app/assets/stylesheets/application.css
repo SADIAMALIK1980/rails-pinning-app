@@ -14,3 +14,7 @@
  *= require_self
  */
 @import url(https://fonts.googleapis.com/css?family=Lobster);
+
+body {
+	background:url('images/tiles-02.png'); 
+}

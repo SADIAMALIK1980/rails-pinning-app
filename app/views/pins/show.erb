@@ -1,17 +1,17 @@
 <div class="header">
   <h1>
-    <%= "#{@pin.title}" %>
+    <%= "#{@pins.title}" %>
   </h1>
 </div>
 
 <div class="show-pin">
-  <p><%= "#{@pin.text}" %></p>
+  <p><%= "#{@pins.text}" %></p>
 
   <hr/>
   <p>
-    <b>Visit <%= "#{@pin.title}" %> at: </b>
-    <a class="url" href="<%= "#{pin.url}" %>" target="_blank">
-      <%= "#{pin.url}" %>
+    <b>Visit <%= "#{@pins.title}" %> at: </b>
+    <a class="url" href="<%= "#{@pins.url}" %>" target="_blank">
+      <%= "#{@pins.url}" %>
     </a>
   </p>
 </div>

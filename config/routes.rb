@@ -7,6 +7,12 @@ Rails.application.routes.draw do
 
   resources :pins
     
+  # pin route:
+   get 'pins/:id' => 'pins#view'
+
+  # Example resource route (maps HTTP verbs to controller actions automatically):
+    resources :pins
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

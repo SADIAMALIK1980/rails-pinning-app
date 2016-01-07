@@ -1,0 +1,1068 @@
+
+
+Started GET "/" for ::1 at 2016-01-06 23:16:08 -0500
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.0) lib/active_record/migration.rb:393:in `check_pending!'
+  activerecord (4.2.0) lib/active_record/migration.rb:374:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (2.15.3) lib/puma/server.rb:541:in `handle_request'
+  puma (2.15.3) lib/puma/server.rb:388:in `process_client'
+  puma (2.15.3) lib/puma/server.rb:270:in `block in run'
+  puma (2.15.3) lib/puma/thread_pool.rb:106:in `call'
+  puma (2.15.3) lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (201.2ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (150.4ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (370.1ms)
+  [1m[36mSQL (15.6ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (171.9ms)[0m  CREATE TABLE "pins" ("id" serial primary key, "title" character varying, "url" character varying, "text" text, "slug" character varying, "resource_type" character varying) 
+  [1m[36m (62.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (281.3ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (15.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150320022457')
+  [1m[36m (15.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150318194553')[0m
+  [1m[35mSQL (0.0ms)[0m  CREATE EXTENSION IF NOT EXISTS "plpgsql"
+  [1m[36m (234.4ms)[0m  [1mCREATE TABLE "pins" ("id" serial primary key, "title" character varying, "url" character varying, "text" text, "slug" character varying, "resource_type" character varying) [0m
+  [1m[35m (78.1ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (78.1ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.0ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150320022457')[0m
+  [1m[35m (15.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150318194553')
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mPin Exists (46.9ms)[0m  [1mSELECT  1 AS one FROM "pins" WHERE "pins"."slug" = 'rails-tutorial' LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "pins" ("title", "url", "text", "slug", "resource_type") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "Rails Tutorial"], ["url", "https://www.railstutorial.org/"], ["text", "The trusted standard in self-directed introductions to Ruby on Rails. A complete treatment of all the essentials\n    required in most production Rails applications."], ["slug", "rails-tutorial"], ["resource_type", "rails"]]
+  [1m[36m (218.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mPin Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "pins" WHERE "pins"."slug" = 'rails-for-zombies' LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "pins" ("title", "url", "text", "slug", "resource_type") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "Rails for Zombies"], ["url", "http://railsforzombies.org"], ["text", "A fun, gamified way to hone your Rails skills! Come on...who doesn't like fighting zombies?!"], ["slug", "rails-for-zombies"], ["resource_type", "rails"]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mPin Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "pins" WHERE "pins"."slug" = 'try-ruby' LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "pins" ("title", "url", "text", "slug", "resource_type") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "Try Ruby"], ["url", "http://tryruby.org/"], ["text", "An interactive, in-browser tutorial for the Ruby programming language. A thorough walkthrough of \n    Ruby's nuances, geared toward beginners."], ["slug", "try-ruby"], ["resource_type", "ruby"]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mPin Exists (15.6ms)[0m  [1mSELECT  1 AS one FROM "pins" WHERE "pins"."slug" = 'ruby-quiz' LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "pins" ("title", "url", "text", "slug", "resource_type") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "Ruby Quiz"], ["url", "http://rubyquiz.org"], ["text", "A collection of quizzes on the Ruby programming language."], ["slug", "ruby-quiz"], ["resource_type", "ruby"]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mPin Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "pins" WHERE "pins"."slug" = 'ga-ror-for-developers' LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "pins" ("title", "url", "text", "slug", "resource_type") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "Ruby on Rails for Developers"], ["url", "https://github.com/generalassembly/ga-ruby-on-rails-for-devs"], ["text", "Somewhat advanced curriculum, but the exercises are also good for anyone who is motivated and \n    self-guided with experience."], ["slug", "ga-ror-for-developers"], ["resource_type", "rails"]]
+  [1m[36m (15.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mPin Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "pins" WHERE "pins"."slug" = 'ruby-monk' LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "pins" ("title", "url", "text", "slug", "resource_type") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["title", "Ruby Monk"], ["url", "http://rubymonk.com"], ["text", "The Ruby Primer is a free interactive book that helps you learn Ruby. Discover Ruby idioms, learn \n    lessons and solve problems, all in your browser!"], ["slug", "ruby-monk"], ["resource_type", "ruby"]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for ::1 at 2016-01-06 23:18:40 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (2.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PinsController#index as HTML
+  [1m[35mPin Load (7.8ms)[0m  SELECT "pins".* FROM "pins"
+  Rendered pins/index.erb within layouts/application (45.9ms)
+Completed 500 Internal Server Error in 17431ms
+
+ActionView::Template::Error (TypeError: Object doesn't support this property or method):
+    3: <head>
+    4:   <title>Coder Pinterest</title>
+    5:   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    6:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    7:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    8:   <%= csrf_meta_tags %>
+    9: </head>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__582021089_36144504'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (16.6ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (131.8ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (118.2ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (275.4ms)
+
+
+Started GET "/" for ::1 at 2016-01-06 23:22:40 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (2.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PinsController#index as HTML
+  [1m[35mPin Load (3.9ms)[0m  SELECT "pins".* FROM "pins"
+  Rendered pins/index.erb within layouts/application (59.6ms)
+Completed 200 OK in 29219ms (Views: 29129.9ms | ActiveRecord: 22.5ms)
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-06 23:23:13 -0500
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2016-01-06 23:23:14 -0500
+
+
+Started GET "/assets/pins.self-1d6c8da72749b8a6187a3b5d7e70f6d340e031b7dcbd66e4c6113562a1c7d4a3.css?body=1" for ::1 at 2016-01-06 23:23:14 -0500
+
+
+Started GET "/assets/application.self-e7a2f61f11e45634a8aec5caf2b0ead9e7b1d10aa20ddfd12dcb28faa6ed5289.css?body=1" for ::1 at 2016-01-06 23:23:14 -0500
+
+
+Started GET "/assets/turbolinks.self-6fb86ff58d930b560704818c7d9e5f60d83d65b91c6778c7f7e4210d5ba82127.js?body=1" for ::1 at 2016-01-06 23:23:15 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-06 23:23:15 -0500
+
+
+Started GET "/assets/cosmo-bootswatch-theme.self-c47e5de2daab674872713b8e1066b4ca5f69e2437ff6dd0ee3ffc4b21557fc00.css?body=1" for ::1 at 2016-01-06 23:23:15 -0500
+
+
+Started GET "/pins/1" for ::1 at 2016-01-06 23:25:23 -0500
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPin Load (33.2ms)[0m  [1mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered pins/show.erb within layouts/application (68.4ms)
+Completed 500 Internal Server Error in 268ms
+
+ActionView::Template::Error (undefined local variable or method `pin' for #<#<Class:0x529cd88>:0x809fcb8>):
+    10:   <hr/>
+    11:   <p>
+    12:     <b>Visit <%= "#{@pin.title}" %> at: </b>
+    13:     <a class="url" href="<%= "#{pin.url}" %>" target="_blank">
+    14:       <%= "#{pin.url}" %>
+    15:     </a>
+    16:   </p>
+  app/views/pins/show.erb:13:in `_app_views_pins_show_erb__358164111_67432692'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.7ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (125.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (109.4ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (265.6ms)
+
+
+Started GET "/pins/1" for ::1 at 2016-01-06 23:25:24 -0500
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPin Load (1.0ms)[0m  SELECT  "pins".* FROM "pins" WHERE "pins"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered pins/show.erb within layouts/application (44.9ms)
+Completed 500 Internal Server Error in 74ms
+
+ActionView::Template::Error (undefined local variable or method `pin' for #<#<Class:0x529cd88>:0x8a8d600>):
+    10:   <hr/>
+    11:   <p>
+    12:     <b>Visit <%= "#{@pin.title}" %> at: </b>
+    13:     <a class="url" href="<%= "#{pin.url}" %>" target="_blank">
+    14:       <%= "#{pin.url}" %>
+    15:     </a>
+    16:   </p>
+  app/views/pins/show.erb:13:in `_app_views_pins_show_erb__358164111_72639864'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (18.6ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (157.2ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (142.6ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (324.2ms)
+
+
+Started GET "/pins/2" for ::1 at 2016-01-06 23:25:56 -0500
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPin Load (1.0ms)[0m  [1mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered pins/show.erb within layouts/application (33.2ms)
+Completed 500 Internal Server Error in 53ms
+
+ActionView::Template::Error (undefined local variable or method `pin' for #<#<Class:0x529cd88>:0x8a75660>):
+    10:   <hr/>
+    11:   <p>
+    12:     <b>Visit <%= "#{@pin.title}" %> at: </b>
+    13:     <a class="url" href="<%= "#{pin.url}" %>" target="_blank">
+    14:       <%= "#{pin.url}" %>
+    15:     </a>
+    16:   </p>
+  app/views/pins/show.erb:13:in `_app_views_pins_show_erb__358164111_67432692'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (125.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (250.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (437.5ms)
+
+
+Started GET "/pins/2" for ::1 at 2016-01-06 23:25:57 -0500
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPin Load (1.0ms)[0m  SELECT  "pins".* FROM "pins" WHERE "pins"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered pins/show.erb within layouts/application (35.2ms)
+Completed 500 Internal Server Error in 58ms
+
+ActionView::Template::Error (undefined local variable or method `pin' for #<#<Class:0x529cd88>:0x8c8eed0>):
+    10:   <hr/>
+    11:   <p>
+    12:     <b>Visit <%= "#{@pin.title}" %> at: </b>
+    13:     <a class="url" href="<%= "#{pin.url}" %>" target="_blank">
+    14:       <%= "#{pin.url}" %>
+    15:     </a>
+    16:   </p>
+  app/views/pins/show.erb:13:in `_app_views_pins_show_erb__358164111_72639864'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.7ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (161.1ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (150.4ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (331.1ms)
+
+
+Started GET "/pins/2" for ::1 at 2016-01-06 23:26:17 -0500
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPin Load (2.0ms)[0m  [1mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered pins/show.erb within layouts/application (31.3ms)
+Completed 500 Internal Server Error in 57ms
+
+ActionView::Template::Error (undefined local variable or method `pin' for #<#<Class:0x529cd88>:0xa1b2ee8>):
+    10:   <hr/>
+    11:   <p>
+    12:     <b>Visit <%= "#{@pin.title}" %> at: </b>
+    13:     <a class="url" href="<%= "#{pin.url}" %>" target="_blank">
+    14:       <%= "#{pin.url}" %>
+    15:     </a>
+    16:   </p>
+  app/views/pins/show.erb:13:in `_app_views_pins_show_erb__358164111_67432692'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.6ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (105.5ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (15.6ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (109.4ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (250.0ms)
+
+
+Started GET "/pins/2" for ::1 at 2016-01-06 23:26:18 -0500
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPin Load (2.0ms)[0m  SELECT  "pins".* FROM "pins" WHERE "pins"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered pins/show.erb within layouts/application (41.0ms)
+Completed 500 Internal Server Error in 65ms
+
+ActionView::Template::Error (undefined local variable or method `pin' for #<#<Class:0x529cd88>:0x43a6838>):
+    10:   <hr/>
+    11:   <p>
+    12:     <b>Visit <%= "#{@pin.title}" %> at: </b>
+    13:     <a class="url" href="<%= "#{pin.url}" %>" target="_blank">
+    14:       <%= "#{pin.url}" %>
+    15:     </a>
+    16:   </p>
+  app/views/pins/show.erb:13:in `_app_views_pins_show_erb__358164111_72639864'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (17.6ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (154.3ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (7.8ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (151.4ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (330.1ms)
+
+
+Started GET "/" for ::1 at 2016-01-06 23:28:15 -0500
+Processing by PinsController#index as HTML
+  [1m[36mPin Load (2.0ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.erb within layouts/application (36.1ms)
+Completed 200 OK in 266ms (Views: 232.4ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/assets/cosmo-bootswatch-theme.self-c47e5de2daab674872713b8e1066b4ca5f69e2437ff6dd0ee3ffc4b21557fc00.css?body=1" for ::1 at 2016-01-06 23:28:15 -0500
+
+
+Started GET "/assets/pins.self-1d6c8da72749b8a6187a3b5d7e70f6d340e031b7dcbd66e4c6113562a1c7d4a3.css?body=1" for ::1 at 2016-01-06 23:28:15 -0500
+
+
+Started GET "/assets/application.self-e7a2f61f11e45634a8aec5caf2b0ead9e7b1d10aa20ddfd12dcb28faa6ed5289.css?body=1" for ::1 at 2016-01-06 23:28:15 -0500
+
+
+Started GET "/assets/turbolinks.self-6fb86ff58d930b560704818c7d9e5f60d83d65b91c6778c7f7e4210d5ba82127.js?body=1" for ::1 at 2016-01-06 23:28:16 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-06 23:28:16 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-06 23:28:16 -0500
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2016-01-06 23:28:16 -0500
+
+
+Started GET "/pins/2" for ::1 at 2016-01-06 23:28:19 -0500
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPin Load (0.0ms)[0m  SELECT  "pins".* FROM "pins" WHERE "pins"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered pins/show.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 31ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="header">
+    2:   <h1>
+    3:     <%= "#{@pin.title}" %>
+    4:   </h1>
+    5: </div>
+    6: 
+  app/views/pins/show.erb:3:in `_app_views_pins_show_erb__358164111_67432692'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.6ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (109.4ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (109.4ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (250.0ms)
+
+
+Started GET "/pins/2" for ::1 at 2016-01-06 23:28:20 -0500
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPin Load (1.0ms)[0m  [1mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered pins/show.erb within layouts/application (7.8ms)
+Completed 500 Internal Server Error in 32ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="header">
+    2:   <h1>
+    3:     <%= "#{@pin.title}" %>
+    4:   </h1>
+    5: </div>
+    6: 
+  app/views/pins/show.erb:3:in `_app_views_pins_show_erb__358164111_72639864'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (20.5ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.8ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (164.1ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (7.8ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (158.2ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (339.8ms)
+
+
+Started GET "/pins/2" for ::1 at 2016-01-06 23:41:35 -0500
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPin Load (1.0ms)[0m  SELECT  "pins".* FROM "pins" WHERE "pins"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered pins/show.erb within layouts/application (47.9ms)
+Completed 500 Internal Server Error in 202ms
+
+ActionView::Template::Error (undefined local variable or method `pins' for #<#<Class:0xa13c2f8>:0x8492ca0>):
+    10:   <hr/>
+    11:   <p>
+    12:     <b>Visit <%= "#{@pins.title}" %> at: </b>
+    13:     <a class="url" href="<%= "#{pins.url}" %>" target="_blank">
+    14:       <%= "#{pins.url}" %>
+    15:     </a>
+    16:   </p>
+  app/views/pins/show.erb:13:in `_app_views_pins_show_erb__358164111_69505176'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (18.6ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (178.7ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (7.8ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (152.3ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (336.9ms)
+
+
+Started GET "/pins/2" for ::1 at 2016-01-06 23:43:38 -0500
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPin Load (2.0ms)[0m  [1mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered pins/show.erb within layouts/application (16.6ms)
+Completed 500 Internal Server Error in 48ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+     9: 
+    10:   <hr/>
+    11:   <p>
+    12:     <b>Visit <%= "#{@pin.title}" %> at: </b>
+    13:     <a class="url" href="<%= "#{pin.url}" %>" target="_blank">
+    14:       <%= "#{pin.url}" %>
+    15:     </a>
+  app/views/pins/show.erb:12:in `_app_views_pins_show_erb__358164111_73451160'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (21.5ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (155.3ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (154.3ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (7.8ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (336.9ms)
+
+
+Started GET "/pins/2" for ::1 at 2016-01-06 23:44:01 -0500
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPin Load (1.0ms)[0m  SELECT  "pins".* FROM "pins" WHERE "pins"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered pins/show.erb within layouts/application (69.3ms)
+Completed 500 Internal Server Error in 130ms
+
+ActionView::Template::Error (undefined local variable or method `pins' for #<#<Class:0xa13c2f8>:0x7f8fa50>):
+    10:   <hr/>
+    11:   <p>
+    12:     <b>Visit <%= "#{@pins.title}" %> at: </b>
+    13:     <a class="url" href="<%= "#{pins.url}" %>" target="_blank">
+    14:       <%= "#{pins.url}" %>
+    15:     </a>
+    16:   </p>
+  app/views/pins/show.erb:13:in `_app_views_pins_show_erb__358164111_66875172'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.7ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (155.3ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (158.2ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (360.4ms)
+
+
+Started GET "/pins/2" for ::1 at 2016-01-06 23:44:36 -0500
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPin Load (8.8ms)[0m  [1mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered pins/show.erb within layouts/application (10.7ms)
+Completed 500 Internal Server Error in 50ms
+
+ActionView::Template::Error (undefined method `text' for nil:NilClass):
+     5: </div>
+     6: 
+     7: <div class="show-pin">
+     8:   <p><%= "#{@pin.text}" %></p>
+     9: 
+    10:   <hr/>
+    11:   <p>
+  app/views/pins/show.erb:8:in `_app_views_pins_show_erb__358164111_84924552'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.7ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (261.7ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (152.3ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (332.0ms)
+
+
+Started GET "/pins/2" for ::1 at 2016-01-06 23:44:51 -0500
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPin Load (1.0ms)[0m  SELECT  "pins".* FROM "pins" WHERE "pins"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered pins/show.erb within layouts/application (72.3ms)
+Completed 500 Internal Server Error in 100ms
+
+ActionView::Template::Error (undefined local variable or method `pin' for #<#<Class:0xa13c2f8>:0x3f0d8c0>):
+    10:   <hr/>
+    11:   <p>
+    12:     <b>Visit <%= "#{@pins.title}" %> at: </b>
+    13:     <a class="url" href="<%= "#{pin.url}" %>" target="_blank">
+    14:       <%= "#{pin.url}" %>
+    15:     </a>
+    16:   </p>
+  app/views/pins/show.erb:13:in `_app_views_pins_show_erb__358164111_33010380'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.7ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (168.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (151.4ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (7.8ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (337.9ms)
+
+
+Started GET "/pins/2" for ::1 at 2016-01-06 23:53:28 -0500
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPin Load (2.0ms)[0m  [1mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered pins/show.erb within layouts/application (8.8ms)
+Completed 500 Internal Server Error in 76ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="header">
+    2:   <h1>
+    3:     <%= "#{@pin.title}" %>
+    4:   </h1>
+    5: </div>
+    6: 
+  app/views/pins/show.erb:3:in `_app_views_pins_show_erb__358164111_71923848'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (18.6ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (342.8ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (244.1ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (4333.0ms)
+
+
+Started GET "/pins/2" for ::1 at 2016-01-06 23:54:21 -0500
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPin Load (1.0ms)[0m  SELECT  "pins".* FROM "pins" WHERE "pins"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered pins/show.erb within layouts/application (9.8ms)
+Completed 500 Internal Server Error in 48ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+     9: 
+    10:   <hr/>
+    11:   <p>
+    12:     <b>Visit <%= "#{@pin.title}" %> at: </b>
+    13:     <a class="url" href="<%= "#{pin.url}" %>" target="_blank">
+    14:       <%= "#{pin.url}" %>
+    15:     </a>
+  app/views/pins/show.erb:12:in `_app_views_pins_show_erb__358164111_71635620'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.7ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (157.2ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (153.3ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (335.9ms)
+
+
+Started GET "/pins/2" for ::1 at 2016-01-06 23:54:37 -0500
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPin Load (2.0ms)[0m  [1mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered pins/show.erb within layouts/application (137.7ms)
+Completed 500 Internal Server Error in 179ms
+
+ActionView::Template::Error (undefined local variable or method `pin' for #<#<Class:0x899e0f8>:0x8420b50>):
+    10:   <hr/>
+    11:   <p>
+    12:     <b>Visit <%= "#{@pins.title}" %> at: </b>
+    13:     <a class="url" href="<%= "#{pin.url}" %>" target="_blank">
+    14:       <%= "#{pin.url}" %>
+    15:     </a>
+    16:   </p>
+  app/views/pins/show.erb:13:in `_app_views_pins_show_erb__358164111_69074208'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.7ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (150.4ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (7.8ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (154.3ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (338.9ms)
+
+
+Started GET "/pins/2" for ::1 at 2016-01-06 23:55:02 -0500
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPin Load (1.0ms)[0m  SELECT  "pins".* FROM "pins" WHERE "pins"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered pins/show.erb within layouts/application (119.1ms)
+Completed 500 Internal Server Error in 164ms
+
+ActionView::Template::Error (undefined local variable or method `pin' for #<#<Class:0x899e0f8>:0x919a1a8>):
+    10:   <hr/>
+    11:   <p>
+    12:     <b>Visit <%= "#{@pins.title}" %> at: </b>
+    13:     <a class="url" href="<%= "#{pin.url}" %>" target="_blank">
+    14:       <%= "#{pin.url}" %>
+    15:     </a>
+    16:   </p>
+  app/views/pins/show.erb:13:in `_app_views_pins_show_erb__358164111_69074208'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (19.5ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (159.2ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (153.3ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (348.6ms)
+
+
+Started GET "/pins/2" for ::1 at 2016-01-06 23:55:06 -0500
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPin Load (1.0ms)[0m  [1mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered pins/show.erb within layouts/application (91.8ms)
+Completed 500 Internal Server Error in 117ms
+
+ActionView::Template::Error (undefined local variable or method `pin' for #<#<Class:0x899e0f8>:0x551be18>):
+    10:   <hr/>
+    11:   <p>
+    12:     <b>Visit <%= "#{@pins.title}" %> at: </b>
+    13:     <a class="url" href="<%= "#{pin.url}" %>" target="_blank">
+    14:       <%= "#{pin.url}" %>
+    15:     </a>
+    16:   </p>
+  app/views/pins/show.erb:13:in `_app_views_pins_show_erb__358164111_69074208'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (22.5ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (233.4ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (156.3ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (8.8ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (353.5ms)
+
+
+Started GET "/pins/2" for ::1 at 2016-01-06 23:55:47 -0500
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPin Load (1.0ms)[0m  SELECT  "pins".* FROM "pins" WHERE "pins"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered pins/show.erb within layouts/application (1.0ms)
+Completed 200 OK in 313ms (Views: 309.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/cosmo-bootswatch-theme.self-c47e5de2daab674872713b8e1066b4ca5f69e2437ff6dd0ee3ffc4b21557fc00.css?body=1" for ::1 at 2016-01-06 23:55:47 -0500
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2016-01-06 23:55:47 -0500
+
+
+Started GET "/assets/application.self-e7a2f61f11e45634a8aec5caf2b0ead9e7b1d10aa20ddfd12dcb28faa6ed5289.css?body=1" for ::1 at 2016-01-06 23:55:48 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-06 23:55:48 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-06 23:55:48 -0500
+
+
+Started GET "/assets/turbolinks.self-6fb86ff58d930b560704818c7d9e5f60d83d65b91c6778c7f7e4210d5ba82127.js?body=1" for ::1 at 2016-01-06 23:55:48 -0500
+
+
+Started GET "/assets/pins.self-1d6c8da72749b8a6187a3b5d7e70f6d340e031b7dcbd66e4c6113562a1c7d4a3.css?body=1" for ::1 at 2016-01-06 23:55:48 -0500
+
+
+Started GET "/" for ::1 at 2016-01-06 23:55:57 -0500
+Processing by PinsController#index as HTML
+  [1m[36mPin Load (1.0ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.erb within layouts/application (14.6ms)
+Completed 200 OK in 165ms (Views: 163.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/pins/2" for ::1 at 2016-01-06 23:56:00 -0500
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPin Load (1.0ms)[0m  SELECT  "pins".* FROM "pins" WHERE "pins"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered pins/show.erb within layouts/application (2.9ms)
+Completed 200 OK in 177ms (Views: 171.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/pins/4" for ::1 at 2016-01-06 23:56:04 -0500
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (1.0ms)[0m  [1mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered pins/show.erb within layouts/application (1.0ms)
+Completed 200 OK in 156ms (Views: 151.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/pins/6" for ::1 at 2016-01-06 23:56:15 -0500
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPin Load (1.0ms)[0m  SELECT  "pins".* FROM "pins" WHERE "pins"."id" = $1 LIMIT 1  [["id", 6]]
+  Rendered pins/show.erb within layouts/application (1.0ms)
+Completed 200 OK in 142ms (Views: 137.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/pins/2" for ::1 at 2016-01-06 23:56:29 -0500
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPin Load (1.0ms)[0m  [1mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered pins/show.erb within layouts/application (0.0ms)
+Completed 200 OK in 126ms (Views: 122.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/pins/3" for ::1 at 2016-01-06 23:56:48 -0500
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPin Load (1.0ms)[0m  SELECT  "pins".* FROM "pins" WHERE "pins"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered pins/show.erb within layouts/application (0.0ms)
+Completed 200 OK in 117ms (Views: 113.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/pins/2" for ::1 at 2016-01-06 23:57:53 -0500
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPin Load (1.0ms)[0m  [1mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered pins/show.erb within layouts/application (0.0ms)
+Completed 200 OK in 107ms (Views: 103.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-07 00:06:46 -0500
+Processing by PinsController#index as HTML
+  [1m[35mPin Load (2.0ms)[0m  SELECT "pins".* FROM "pins"
+  Rendered pins/index.erb within layouts/application (15.6ms)
+Completed 200 OK in 594ms (Views: 582.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/pins.self-1d6c8da72749b8a6187a3b5d7e70f6d340e031b7dcbd66e4c6113562a1c7d4a3.css?body=1" for ::1 at 2016-01-07 00:06:47 -0500
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2016-01-07 00:06:47 -0500
+
+
+Started GET "/assets/cosmo-bootswatch-theme.self-88682ab1daeb7e68c0da5c5d378ea5cca1f731d6ef79a7dbe326dbdeb86b0a1b.css?body=1" for ::1 at 2016-01-07 00:06:47 -0500
+
+
+Started GET "/assets/application.self-e7a2f61f11e45634a8aec5caf2b0ead9e7b1d10aa20ddfd12dcb28faa6ed5289.css?body=1" for ::1 at 2016-01-07 00:06:47 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-07 00:06:47 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-07 00:06:47 -0500
+
+
+Started GET "/assets/turbolinks.self-6fb86ff58d930b560704818c7d9e5f60d83d65b91c6778c7f7e4210d5ba82127.js?body=1" for ::1 at 2016-01-07 00:06:47 -0500
+
+
+Started GET "/assets/images/laptop-background.jpg" for ::1 at 2016-01-07 00:06:48 -0500
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/laptop-background.jpg"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (2.15.3) lib/puma/server.rb:541:in `handle_request'
+  puma (2.15.3) lib/puma/server.rb:388:in `process_client'
+  puma (2.15.3) lib/puma/server.rb:270:in `block in run'
+  puma (2.15.3) lib/puma/thread_pool.rb:106:in `call'
+  puma (2.15.3) lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (12.7ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (293.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (616.2ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (162.1ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (381.8ms)
+
+
+Started GET "/" for ::1 at 2016-01-07 00:06:50 -0500
+Processing by PinsController#index as HTML
+  [1m[36mPin Load (2.0ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.erb within layouts/application (24.4ms)
+Completed 200 OK in 290ms (Views: 287.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/cosmo-bootswatch-theme.self-88682ab1daeb7e68c0da5c5d378ea5cca1f731d6ef79a7dbe326dbdeb86b0a1b.css?body=1" for ::1 at 2016-01-07 00:06:50 -0500
+
+
+Started GET "/assets/turbolinks.self-6fb86ff58d930b560704818c7d9e5f60d83d65b91c6778c7f7e4210d5ba82127.js?body=1" for ::1 at 2016-01-07 00:06:50 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-07 00:06:50 -0500
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2016-01-07 00:06:51 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-07 00:06:51 -0500
+
+
+Started GET "/assets/application.self-e7a2f61f11e45634a8aec5caf2b0ead9e7b1d10aa20ddfd12dcb28faa6ed5289.css?body=1" for ::1 at 2016-01-07 00:06:51 -0500
+
+
+Started GET "/assets/pins.self-1d6c8da72749b8a6187a3b5d7e70f6d340e031b7dcbd66e4c6113562a1c7d4a3.css?body=1" for ::1 at 2016-01-07 00:06:51 -0500
+
+
+Started GET "/assets/images/laptop-background.jpg" for ::1 at 2016-01-07 00:06:51 -0500
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/laptop-background.jpg"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (2.15.3) lib/puma/server.rb:541:in `handle_request'
+  puma (2.15.3) lib/puma/server.rb:388:in `process_client'
+  puma (2.15.3) lib/puma/server.rb:270:in `block in run'
+  puma (2.15.3) lib/puma/thread_pool.rb:106:in `call'
+  puma (2.15.3) lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (213.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (168.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (462.9ms)
+
+
+Started GET "/" for ::1 at 2016-01-07 00:08:34 -0500
+Processing by PinsController#index as HTML
+  [1m[35mPin Load (1.0ms)[0m  SELECT "pins".* FROM "pins"
+  Rendered pins/index.erb within layouts/application (178.7ms)
+Completed 200 OK in 577ms (Views: 574.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/cosmo-bootswatch-theme.self-c47e5de2daab674872713b8e1066b4ca5f69e2437ff6dd0ee3ffc4b21557fc00.css?body=1" for ::1 at 2016-01-07 00:08:35 -0500
+
+
+Started GET "/assets/pins.self-1d6c8da72749b8a6187a3b5d7e70f6d340e031b7dcbd66e4c6113562a1c7d4a3.css?body=1" for ::1 at 2016-01-07 00:08:35 -0500
+
+
+Started GET "/assets/application.self-a3dfbb5e962790116651815eacb974d2815df11d017c53ac88cae9a0cd338cdf.css?body=1" for ::1 at 2016-01-07 00:08:35 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-07 00:08:35 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-07 00:08:35 -0500
+
+
+Started GET "/assets/turbolinks.self-6fb86ff58d930b560704818c7d9e5f60d83d65b91c6778c7f7e4210d5ba82127.js?body=1" for ::1 at 2016-01-07 00:08:35 -0500
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2016-01-07 00:08:35 -0500
+
+
+Started GET "/assets/images/tiles-02.png" for ::1 at 2016-01-07 00:08:35 -0500
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/tiles-02.png"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (2.15.3) lib/puma/server.rb:541:in `handle_request'
+  puma (2.15.3) lib/puma/server.rb:388:in `process_client'
+  puma (2.15.3) lib/puma/server.rb:270:in `block in run'
+  puma (2.15.3) lib/puma/thread_pool.rb:106:in `call'
+  puma (2.15.3) lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (208.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (153.3ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.9ms)
+  Rendered C:/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (345.7ms)
+
+
+Started GET "/pins/2" for ::1 at 2016-01-07 00:08:44 -0500
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPin Load (1.0ms)[0m  [1mSELECT  "pins".* FROM "pins" WHERE "pins"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered pins/show.erb within layouts/application (1.0ms)
+Completed 200 OK in 147ms (Views: 142.6ms | ActiveRecord: 1.0ms)
