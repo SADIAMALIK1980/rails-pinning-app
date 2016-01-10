@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   root 'pins#index'
 
   resources :pins
-    
+  
+   get '/library' => 'pins#index'
+
   # pin route:
    get 'pins/:id' => 'pins#view'
 
