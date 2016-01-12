@@ -4,16 +4,18 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'pins#index'
-
+  get "pins/name-:slug" => "pins#show_by_name", as: 'pin_by_name' 
   resources :pins
-  
+   
+   
    get '/library' => 'pins#index'
 
+   
   # pin route:
-   get 'pins/:id' => 'pins#view'
+   # get 'pins/:id' => 'pins#view'
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-    resources :pins
+    #resources :pins
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
