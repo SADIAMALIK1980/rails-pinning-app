@@ -20,13 +20,9 @@
     
     		  	<div class="col-xs-9">
               		<h4>
-                	<a href="<%= pin_by_name_path(slug: pin.slug) %>">
-                  	<%= "#{pin.title}" %>
-                	</a>
+                <%= link_to "#{pin.title}", pin_by_name_path(slug: pin.slug) %>
               		</h4>
-              		<a class="url" href="<%= "#{pin.url}" %>">
-                	<%= "#{pin.url}" %>
-              		</a>
+              		<%= link_to "#{pin.url}", "#{pin.url}", html_options = {target: "_blank", class: "url"} %>
             	</div>
             <hr/>
             <p class="text"><%= "#{pin.text}" %></p>
