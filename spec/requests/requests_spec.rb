@@ -16,6 +16,5 @@ RSpec.describe "Our Application Routes" do
       expect(assigns[:pins]).to eq(pin)
     end
 
-
   end
 end
