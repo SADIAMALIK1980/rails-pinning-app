@@ -4,7 +4,7 @@ require 'rspec/rails'
 
 RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
-  
+
   config.before(:suite) do
     DatabaseCleaner.strategy = :transaction
     DatabaseCleaner.clean_with(:truncation)
