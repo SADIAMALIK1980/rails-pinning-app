@@ -1,5 +1,5 @@
 <div class="form-horizontal">
-<%= form_for @pins do |f| %>
+<%= form_for(@pins, multipart: true) do |f| %>
  
 <div class="form-group">
 	<label for="pin_title" class="col-sm-2 control-label">Title</label>
@@ -37,8 +37,15 @@
 </div>
 
 <div class="form-group">
+  <label for="pin_image" class="col-sm-2 control-label">Upload Image</label>
+<div class="col-sm-10">
+  <%= f.file_field :image  %>
+</div>
+</div>
+
+<div class="form-group">
 <div class="col-sm-offset-2 col-sm-10">
-	 <%= f.submit "Edit", class: "btn btn-default" %>
+	 <%= f.button(options = {class: "btn btn-default"}) %>
 <% end %>
 </div>
 </div>

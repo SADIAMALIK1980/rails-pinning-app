@@ -4,4 +4,8 @@ class Pin < ActiveRecord::Base
 
 belongs_to :category # Add category_id in pins table
 
+has_attached_file :image, styles: { medium: "300x300>", thumb: "60x60>" }, default_url: "http://placebear.com/300/300"  
+
+validates_attachment :image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
+
 end

@@ -10,23 +10,24 @@
         <div class="pin-container col-md-4">
           <div class="pin">
             <div class="pin-header row">
- 			<div class="logo-thumbnail col-xs-3">
-				<% if "#{pin.category.name}" == "rails" %>
-      <%= image_tag('rails-logo-thumbnail.png') %>
-    <% elsif "#{pin.category.name}" == "ruby" %>
-      <%= image_tag('ruby-logo-thumbnail.png') %>                
-    <% end %>
-    			</div>
-    
-    		  	<div class="col-xs-9">
-              		<h4>
+<div class="logo-thumbnail col-xs-3">
+                <% if pin.image_file_name.nil? == false %>
+                  <img src="<%= pin.image.url(:thumb) %>"', class= "pull-left"  >
+                <% elsif pin.category.name == "rails" %>
+                  <%= image_tag('rails-logo-thumbnail.png') %>
+                <% elsif pin.category.name == "ruby" %>
+                  <%= image_tag('ruby-logo-thumbnail.png') %>    
+                  <% end %>
+              </div>
+<div class="col-xs-9">
+              	<h4>
                 <%= link_to "#{pin.title}", pin_by_name_path(slug: pin.slug) %>
-              		</h4>
+              	</h4>
               		<%= link_to "#{pin.url}", "#{pin.url}", html_options = {target: "_blank", class: "url"} %>
             	</div>
-            <hr/>
-            <p class="text"><%= "#{pin.text}" %></p>
-          </div>
+          <hr/> 
+<p class="text"><%= "#{pin.text}" %></p>
+</div>
 		</div>
         </div>
       <% end %>

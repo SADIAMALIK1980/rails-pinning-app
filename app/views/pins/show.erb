@@ -7,7 +7,7 @@
 
 <div class="show-pin">
   <p><%= "#{@pins.text}" %></p>
-
+<img class="img-thumbnail center-block" src="<%= "#{@pins.image.url(:medium)}" %>">
   <hr/>
   <p>
     <b>Visit <%= "#{@pins.title}" %> at: </b>
