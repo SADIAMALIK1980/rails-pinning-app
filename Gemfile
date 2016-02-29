@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Ruby 2.0.0 is Sunsetting on Feb. 24, 2016, so ruby has been upgraded
-#ruby "2.2.4"
+ruby "2.2.4"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
