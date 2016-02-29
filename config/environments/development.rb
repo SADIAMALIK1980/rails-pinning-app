@@ -42,12 +42,12 @@ Rails.application.configure do
 	
 Paperclip.options[:command_path] = 'C:\Program Files (x86)\GnuWin32\bin'
 
-config.paperclip-defaults = {
+config.paperclip_defaults = {
   :storage => :s3,
-  :s3-credentials => {
+  :s3_credentials => {
     :bucket => "skillcrush-rails",
-    :access-key-id => "AKIAI4Y7CIUPPOFAYN2Q",
-    :secret-access_key => "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"
+    :access_key_id => "AKIAI4Y7CIUPPOFAYN2Q",
+    :secret_access_key => "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"
   }
 }
 
