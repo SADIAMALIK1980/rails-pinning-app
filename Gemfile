@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Ruby 2.0.0 is Sunsetting on Feb. 24, 2016, so ruby has been upgraded
-ruby "2.2.4"
+#ruby "2.2.4"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
@@ -27,7 +27,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+ gem 'bcrypt', '~> 3.1.7'
 
 # Use Puma as the web server
 gem 'puma'
@@ -35,21 +35,30 @@ gem 'puma'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-#group :development, :test do
+group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   #gem 'byebug', '~> 5.0'
+   gem 'rspec-rails'
+   gem 'rspec'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0', group: :development
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  gem 'database_cleaner'
-#end
+  
+end
 
 gem 'aws-sdk', '< 2.0'
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
-gem 'rspec'
-gem 'rspec-rails'
+
+
+group :test do
+  gem 'factory_girl'
+  gem 'shoulda-matchers', "< 3.0.0", require: false
+  gem 'database_cleaner'
+ 
+end
+
 gem 'tzinfo-data'
 gem 'rails_12factor'

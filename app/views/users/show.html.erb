@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+<h1>
+    <i class="fa fa-user fa-lg"></i>
+    <%= @user.first_name %>&nbsp;<%= @user.last_name %>
+</h1>
+
+
+<div class="show-pin">
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @user.password %>
+</p>
+</div>
+
+<div class="col-sm-10">
+<i class="fa fa-hand-o-left fa-2x"></i>&nbsp;<%= link_to 'Back', users_path %> &nbsp;|&nbsp; <i class="fa fa-edit fa-2x"></i>&nbsp;<%= link_to 'Edit', edit_user_path(@user) %>
+</div>

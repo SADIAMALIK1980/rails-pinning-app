@@ -53,6 +53,8 @@ GEM
     aws-sdk-v1 (1.66.0)
       json (~> 1.4)
       nokogiri (>= 1.4.4)
+    bcrypt (3.1.10)
+    bcrypt (3.1.10-x86-mingw32)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
@@ -73,6 +75,8 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.6.0)
+    factory_girl (4.5.0)
+      activesupport (>= 3.0.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
@@ -166,6 +170,8 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    shoulda-matchers (2.8.0)
+      activesupport (>= 3.0.0)
     spring (1.6.1)
     sprockets (3.5.2)
       concurrent-ruby (~> 1.0)
@@ -198,9 +204,11 @@ PLATFORMS
 
 DEPENDENCIES
   aws-sdk (< 2.0)
+  bcrypt (~> 3.1.7)
   coffee-rails (~> 4.1.0)
   coffee-script-source (= 1.8.0)
   database_cleaner
+  factory_girl
   jbuilder (~> 2.0)
   jquery-rails
   paperclip!
@@ -212,6 +220,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  shoulda-matchers (< 3.0.0)
   spring
   turbolinks
   tzinfo-data
