@@ -1,0 +1,16 @@
+{
+  "name": "Rails Pinning App",
+  "image": "mcr.microsoft.com/devcontainers/ruby:3",
+  "features": {
+    "ghcr.io/devcontainers/features/postgres:1": {}
+  },
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Rails App",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "postCreateCommand": "bundle install && bundle exec rails db:prepare",
+  "postStartCommand": "bundle exec rails server -b 0.0.0.0"
+}
