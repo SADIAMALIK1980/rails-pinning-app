@@ -1,4 +1,8 @@
-== README
+# Rails Pinning App
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)] (https://codespaces.new/SADIAMALIK1980/rails-pinning-app)
+
+Click the badge above to run the app instantly in your browser!== README
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
